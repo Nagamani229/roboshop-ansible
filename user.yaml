@@ -57,7 +57,7 @@
     register: product_count
   # - name: print the count
   #   ansible.builtin.debug:
-  #     msg: "product count : {{product_count}}"
+  #     msg: "user count : {{user_count}}"
 
   - name: load user data
     ansible.builtin.command: mongo --host mongodb.devopstraining.space < /app/schema/user.js

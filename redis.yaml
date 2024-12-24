@@ -4,7 +4,7 @@
   tasks: 
   - name: install remi release
     ansible.builtin.dnf:
-      name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+      name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
       state: present
 
   - name: enable redis
@@ -20,7 +20,7 @@
        path: /etc/redis/redis.conf
        regexp: '127.0.0.1'
        replace: '0.0.0.0'
-       
+
   - name: start and enable redis
     ansible.builtin.service:
         name: redis

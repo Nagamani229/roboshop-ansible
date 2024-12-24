@@ -1,5 +1,5 @@
 - name: catalogue
-  hosts: catalogue
+  hosts: catalogue.devopstraining.space
   become: yes
   tasks: 
   - name: disable old nidejs and enable nodejs

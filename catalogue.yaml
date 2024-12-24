@@ -60,7 +60,7 @@
     when: product_count.stdout == 0
 
   - name: start and enable catalogue
-    ansible.builtin.service:
+    ansible.builtin.ssystemd_service:
       name: catalogue
       state: restarted
       enabled: yes

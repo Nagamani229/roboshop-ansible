@@ -52,7 +52,7 @@
     ansible.builtin.package:
         name: mongodb-org-shell
         state: present
-  - name: get the categories count
+  - name: get the users count
     ansible.builtin.command:  mongo --host mongodb.devopstraining.space --quiet --eval 'db = db.getSiblingDB("user"); db.products.count()'
     register: product_count
   # - name: print the count
